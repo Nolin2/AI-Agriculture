@@ -2,10 +2,13 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const open = require('open');
-require('dotenv').config();
+// Only load the .env file if we are running locally (not in production)
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
 
 // Enable JSON parsing and CORS for API calls
 app.use(cors());
