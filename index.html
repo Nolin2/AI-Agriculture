@@ -351,7 +351,7 @@
 
       try {
         // USE RELATIVE PATH FOR DEPLOYMENT COMPATIBILITY
-        const resp = await fetch('http://localhost:4000/ai', {
+        const resp = await fetch('https://ai-agriculture-2-8lum.onrender.com/ai', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(body),
